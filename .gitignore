@@ -1,0 +1,17 @@
+# Virtual environment
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs & outputs
+logs/
+outputs/
+videos/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
