@@ -61,6 +61,9 @@ def register_metric(name, module_name, function_name):
 #register_metric("HeadStabilityIndex", "HeadStabilityIndex", "extract_head_stability_index")
 register_metric("HeadLateralDeviation_deg", "HeadLateralDeviation", "extract_head_lateral_deviation_deg")
 #register_metric("HeadAlignmentScore", "HeadAlignmentScore", "extract_head_alignment_score")
+register_metric("LateralBend_deg", "LateralBend", "extract_lateral_bend_deg")
+register_metric("TorsoRotation_deg", "TorsoRotation", "extract_torso_rotation_deg")
+register_metric("TorsoStabilityIndex", "TorsoStability", "extract_torso_stability_index")
 # Add more metrics the same way
 
 def detect_view(video_name: str) -> str:
