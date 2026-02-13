@@ -1,4 +1,4 @@
-# metrics/head_lateral_deviation.py
+# metrics/head_lateral_deviation_deg.py   ← Final Sensitive Version
 
 import cv2
 import mediapipe as mp
@@ -17,26 +17,17 @@ def extract_head_lateral_deviation_deg(
     session_folder,
     logger=None,
     visibility_thresh=0.5,
-    smooth_window=5,
-    burn_in_frames=15,
-    ref_frame_start=15,
-    ref_frame_end=30,
+    smooth_window=7,
+    burn_in_fraction=0.20,
+    ref_frames_after_burn=30,
+    multiplier=40.0,           # Increased for sensitivity
     max_deviation_cap=45.0
 ):
     if logger is None:
         logger = logging.getLogger(__name__)
-        logger.setLevel(logging.DEBUG)  # DEBUG level for frame-by-frame logs
-        handler = logging.StreamHandler()
-        handler.setFormatter(logging.Formatter('%(asctime)s | %(levelname)-8s | %(message)s'))
-        logger.addHandler(handler)
-
-        file_handler = logging.FileHandler(os.path.join(session_folder, "head_lateral_deviation_debug.log"))
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(logging.Formatter('%(asctime)s | %(levelname)-8s | %(message)s'))
-        logger.addHandler(file_handler)
+        logger.setLevel(logging.INFO)
 
     logger.info(f"Starting Head Lateral Deviation for: {video_path}")
-    logger.info(f"Params: visibility_thresh={visibility_thresh}, smooth_window={smooth_window}, burn_in={burn_in_frames}")
 
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
@@ -46,8 +37,15 @@ def extract_head_lateral_deviation_deg(
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     logger.info(f"Video loaded: {total_frames} frames")
 
-    raw_deviation = []
-    head_x_list = []
+    head_x_list = [np.nan] * total_frames
+    raw_deviation = [np.nan] * total_frames
+
+    burn_in_frames = max(15, int(total_frames * burn_in_fraction))
+    ref_start = burn_in_frames
+    ref_end = burn_in_frames + ref_frames_after_burn
+
+    logger.info(f"Burn-in: {burn_in_frames} frames | Ref window: {ref_start} to {ref_end}")
+
     ref_head_x = None
 
     with mp_pose.Pose(
@@ -62,7 +60,6 @@ def extract_head_lateral_deviation_deg(
         for frame_idx in tqdm(range(total_frames), desc="Extracting HeadLateralDeviation_deg"):
             ret, frame = cap.read()
             if not ret:
-                logger.warning(f"Frame read failed at {frame_idx}")
                 break
 
             h, w, _ = frame.shape
@@ -70,9 +67,8 @@ def extract_head_lateral_deviation_deg(
             res = pose.process(rgb)
 
             if not res.pose_landmarks:
-                logger.debug(f"Frame {frame_idx:04d} | No landmarks detected")
-                raw_deviation.append(np.nan)
-                head_x_list.append(np.nan)
+                head_x_list[frame_idx] = np.nan
+                raw_deviation[frame_idx] = np.nan
                 continue
 
             lm = res.pose_landmarks.landmark
@@ -83,77 +79,49 @@ def extract_head_lateral_deviation_deg(
             ls, vLS = get_point(lm, mp_pose.PoseLandmark.LEFT_SHOULDER.value, w, h)
             rs, vRS = get_point(lm, mp_pose.PoseLandmark.RIGHT_SHOULDER.value, w, h)
 
-            min_vis = min(vN, vLE, vRE, vLS, vRS)
-            if min_vis < visibility_thresh:
-                logger.debug(f"Frame {frame_idx:04d} | Low visibility: {min_vis:.3f}")
-                raw_deviation.append(np.nan)
-                head_x_list.append(np.nan)
+            if min(vN, vLE, vRE, vLS, vRS) < visibility_thresh:
+                head_x_list[frame_idx] = np.nan
+                raw_deviation[frame_idx] = np.nan
                 continue
 
-            # Head center x
             head_x = (nose[0] + le[0] + re[0]) / 3.0
-            head_x_list.append(head_x)
+            head_x_list[frame_idx] = head_x
 
-            shoulder_width = abs(ls[0] - rs[0]) + 1e-9
+            # Normalize by IMAGE WIDTH (more consistent than head/shoulder width)
+            image_width = w
 
-            # Burn-in period
             if frame_idx < burn_in_frames:
-                logger.debug(f"Frame {frame_idx:04d} | Burn-in skip | head_x={head_x:.2f}")
-                raw_deviation.append(0.0)
+                raw_deviation[frame_idx] = 0.0
                 continue
 
-            # Set reference head_x
-            if frame_idx == ref_frame_end and ref_head_x is None:
-                valid_ref_x = [x for x in head_x_list[ref_frame_start:ref_frame_end+1] if not np.isnan(x)]
-                if valid_ref_x:
-                    ref_head_x = np.mean(valid_ref_x)
-                    logger.info(f"Reference head x set: {ref_head_x:.2f} (frames {ref_frame_start}-{ref_frame_end})")
-                else:
-                    ref_head_x = head_x
-                    logger.warning(f"No valid ref frames – using current head_x={head_x:.2f}")
+            if frame_idx == ref_end and ref_head_x is None:
+                valid_ref = [x for x in head_x_list[ref_start:ref_end+1] if not np.isnan(x)]
+                ref_head_x = np.mean(valid_ref) if valid_ref else head_x
+                logger.info(f"Reference head x set: {ref_head_x:.2f} px (avg of {len(valid_ref)} frames)")
 
-            # Deviation calculation
             if ref_head_x is None:
-                logger.debug(f"Frame {frame_idx:04d} | No ref yet | head_x={head_x:.2f}")
-                raw_deviation.append(0.0)
+                raw_deviation[frame_idx] = 0.0
                 continue
 
             d_x = abs(head_x - ref_head_x)
-            d_norm = d_x / shoulder_width
-            deviation_deg = np.degrees(np.arctan(d_norm)) * 6.0  # Adjusted sensitivity
+            d_norm = d_x / image_width
 
-            # Soft cap (prevent extreme noise)
-            #deviation_deg = min(deviation_deg, max_deviation_cap)
+            deviation_deg = np.degrees(np.arctan(d_norm)) * multiplier
 
-            # Outlier smoothing (sudden jumps)
-            if frame_idx > 50:
-                prev_avg = np.nanmean(raw_deviation[max(0, frame_idx-20):frame_idx])
-                if deviation_deg > prev_avg * 2.5:
-                    deviation_deg = prev_avg * 1.5
-                    logger.debug(f"Frame {frame_idx:04d} | Outlier clipped | raw={np.degrees(np.arctan(d_norm))*10:.2f} → {deviation_deg:.2f}")
+            # Minimum floor for small real movements
+            if d_x > 1.0 and deviation_deg < 2.0:
+                deviation_deg = 2.0
 
-            raw_deviation.append(deviation_deg)
-
-            # Frame level debug log
-            logger.debug(
-                f"Frame {frame_idx:04d} | "
-                f"head_x={head_x:.2f} | "
-                f"ref_x={ref_head_x:.2f} | "
-                f"d_x={d_x:.2f} | "
-                f"shoulder_w={shoulder_width:.2f} | "
-                f"d_norm={d_norm:.4f} | "
-                f"dev_deg={deviation_deg:.2f}"
-            )
+            deviation_deg = min(deviation_deg, max_deviation_cap)
+            raw_deviation[frame_idx] = deviation_deg
 
     cap.release()
-    logger.info("Processing completed")
 
     series = pd.Series(raw_deviation)
     if smooth_window > 1:
         series = series.rolling(window=smooth_window, min_periods=1, center=True).mean()
 
     series = series.ffill().bfill()
-    logger.info(f"NaN fill applied, remaining NaNs: {series.isna().sum()}")
 
     df = pd.DataFrame({
         "frame": np.arange(len(series)),
@@ -161,14 +129,28 @@ def extract_head_lateral_deviation_deg(
     })
 
     csv_path = os.path.join(session_folder, "HeadLateralDeviation_deg.csv")
-    df.to_csv(csv_path, index=False)
-    avg_dev = df['HeadLateralDeviation_deg'].mean()
-    logger.info(f"CSV saved: {csv_path} | Avg Head Lateral Deviation: {avg_dev:.2f}°")
 
-    # Phase summary
-    stance_avg = df.iloc[burn_in_frames:ref_frame_end]['HeadLateralDeviation_deg'].mean()
-    impact_avg = df.iloc[ref_frame_end:]['HeadLateralDeviation_deg'].mean()
-    logger.info(f"Stance phase avg: {stance_avg:.2f}° | Impact/follow avg: {impact_avg:.2f}°")
+    if os.path.exists(csv_path):
+        try:
+            os.remove(csv_path)
+        except:
+            pass
+
+    try:
+        df.to_csv(csv_path, index=False)
+        logger.info(f"CSV saved: {csv_path}")
+    except PermissionError:
+        logger.error("Permission denied on CSV write. Close Excel and rerun.")
+        return df
+
+    avg_dev = df['HeadLateralDeviation_deg'].mean(skipna=True)
+    max_dev = df['HeadLateralDeviation_deg'].max(skipna=True)
+
+    logger.info(f"Avg Head Lateral Deviation: {avg_dev:.2f}°")
+    logger.info(f"Max Head Lateral Deviation: {max_dev:.2f}°")
 
     print(f"✅ Head Lateral Deviation CSV saved: {csv_path}")
+    print(f"  - Avg Deviation: {avg_dev:.2f}°")
+    print(f"  - Max Deviation: {max_dev:.2f}°")
+
     return df

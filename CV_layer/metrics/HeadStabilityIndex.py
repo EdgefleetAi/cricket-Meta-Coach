@@ -9,8 +9,8 @@ import os
 import logging
 
 
-# utils & config import (nee project lo correct path ivvu)
-from utils import get_point, angle_between, detect_handedness
+# utils & config import 
+from utils import get_point
 from config import VISIBILITY_THRESH, SMOOTH_WINDOW,k
 mp_pose = mp.solutions.pose
 def extract_head_stability_index(
