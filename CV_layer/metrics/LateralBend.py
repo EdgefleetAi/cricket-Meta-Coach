@@ -10,7 +10,7 @@ import logging
 
 mp_pose = mp.solutions.pose
 
-# Utils import (nee project lo correct path ivvu)
+# Utils import
 from utils import get_point, angle_between
 
 def extract_lateral_bend_deg(

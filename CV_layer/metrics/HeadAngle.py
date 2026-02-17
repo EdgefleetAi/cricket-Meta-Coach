@@ -9,7 +9,7 @@ from tqdm import tqdm
 import os
 import logging
 
-# utils & config import (nee project lo correct path ivvu)
+# utils & config import 
 from utils import get_point, angle_between, detect_handedness
 from config import VISIBILITY_THRESH, SMOOTH_WINDOW
 
@@ -44,7 +44,7 @@ def extract_head_angle_deg(video_path, session_folder, logger=None):
 
     raw_angles = []
 
-    # Optional handedness detect (for consistency, kani ee metric ki impact ledu)
+    # Optional handedness detect 
     # handedness = detect_handedness(...)  # Uncomment if needed
 
     with mp_pose.Pose(
