@@ -1,0 +1,1122 @@
+[
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadAlignmentScore",
+      "mean": 0.49110017708333337,
+      "std": 0.2964251362576235,
+      "min": 8e-06,
+      "max": 0.939008,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.49,
+      "std": 0.3,
+      "min": 0.0,
+      "max": 0.94,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.41
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadLateralDeviation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadLateralDeviation_deg",
+      "mean": 28.74837864583333,
+      "std": 21.167319867802743,
+      "min": 0.0,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 28.75,
+      "std": 21.17,
+      "min": 0.0,
+      "max": 45.0,
+      "ideal_range": [
+        2,
+        8
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 20.75
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "LateralBend_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "LateralBend_deg",
+      "mean": 9.407335937500001,
+      "std": 9.246889913753634,
+      "min": 0.0,
+      "max": 30.8457,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 9.41,
+      "std": 9.25,
+      "min": 0.0,
+      "max": 30.85,
+      "ideal_range": [
+        0,
+        20
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "PelvisAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "PelvisAlignmentScore",
+      "mean": 0.508760703125,
+      "std": 0.3078955044777578,
+      "min": 0.0,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.51,
+      "std": 0.31,
+      "min": 0.0,
+      "max": 1.0,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.39
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoRotation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoRotation_deg",
+      "mean": 14.740622395833332,
+      "std": 14.881289148512717,
+      "min": 0.0,
+      "max": 62.1242,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 14.74,
+      "std": 14.88,
+      "min": 0.0,
+      "max": 62.12,
+      "ideal_range": [
+        30,
+        50
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 15.26
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoStabilityIndex",
+      "mean": 0.721185203125,
+      "std": 0.19446165319201927,
+      "min": 0.339634,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.72,
+      "std": 0.19,
+      "min": 0.34,
+      "max": 1.0,
+      "ideal_range": [
+        0.8,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.08
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadAlignmentScore",
+      "mean": 0.5274205389610389,
+      "std": 0.30005888459192603,
+      "min": 0.002068,
+      "max": 0.917088,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.53,
+      "std": 0.3,
+      "min": 0.0,
+      "max": 0.92,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.37
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadLateralDeviation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadLateralDeviation_deg",
+      "mean": 27.467532467532468,
+      "std": 21.670143302978378,
+      "min": 0.0,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 27.47,
+      "std": 21.67,
+      "min": 0.0,
+      "max": 45.0,
+      "ideal_range": [
+        2,
+        8
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 19.47
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "LateralBend_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "LateralBend_deg",
+      "mean": 8.950935064935065,
+      "std": 8.568911942030079,
+      "min": 0.0,
+      "max": 32.1195,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 8.95,
+      "std": 8.57,
+      "min": 0.0,
+      "max": 32.12,
+      "ideal_range": [
+        0,
+        20
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "PelvisAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "PelvisAlignmentScore",
+      "mean": 0.6171533376623376,
+      "std": 0.2692070067132226,
+      "min": 0.003911,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.62,
+      "std": 0.27,
+      "min": 0.0,
+      "max": 1.0,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.28
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoRotation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoRotation_deg",
+      "mean": 15.136437012987013,
+      "std": 17.043992974782583,
+      "min": 0.0,
+      "max": 76.8817,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 15.14,
+      "std": 17.04,
+      "min": 0.0,
+      "max": 76.88,
+      "ideal_range": [
+        30,
+        50
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 14.86
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoStabilityIndex",
+      "mean": 0.7966532402597403,
+      "std": 0.195051108785346,
+      "min": 0.240584,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.8,
+      "std": 0.2,
+      "min": 0.24,
+      "max": 1.0,
+      "ideal_range": [
+        0.8,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadAlignmentScore",
+      "mean": 0.409914737804878,
+      "std": 0.3236556490695761,
+      "min": 1.5e-05,
+      "max": 0.877793,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.41,
+      "std": 0.32,
+      "min": 0.0,
+      "max": 0.88,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.49
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "HeadLateralDeviation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadLateralDeviation_deg",
+      "mean": 27.986768292682925,
+      "std": 21.55972061237747,
+      "min": 0.0,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 27.99,
+      "std": 21.56,
+      "min": 0.0,
+      "max": 45.0,
+      "ideal_range": [
+        2,
+        8
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 19.99
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "LateralBend_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "LateralBend_deg",
+      "mean": 12.235815853658536,
+      "std": 13.315361753547867,
+      "min": 0.0,
+      "max": 42.8685,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 12.24,
+      "std": 13.32,
+      "min": 0.0,
+      "max": 42.87,
+      "ideal_range": [
+        0,
+        20
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "PelvisAlignmentScore",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "PelvisAlignmentScore",
+      "mean": 0.42478652439024384,
+      "std": 0.2860363400082127,
+      "min": 0.017495,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.42,
+      "std": 0.29,
+      "min": 0.02,
+      "max": 1.0,
+      "ideal_range": [
+        0.9,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.48
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoRotation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoRotation_deg",
+      "mean": 13.612357926829269,
+      "std": 13.627512441691783,
+      "min": 0.0,
+      "max": 61.4846,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 13.61,
+      "std": 13.63,
+      "min": 0.0,
+      "max": 61.48,
+      "ideal_range": [
+        30,
+        50
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 16.39
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "front_on",
+    "metric": "TorsoStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TorsoStabilityIndex",
+      "mean": 0.7426121707317074,
+      "std": 0.20279804322810557,
+      "min": 0.213238,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.74,
+      "std": 0.2,
+      "min": 0.21,
+      "max": 1.0,
+      "ideal_range": [
+        0.8,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.06
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "BackFootAnchorStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "BackFootAnchorStabilityIndex",
+      "mean": 0.5447701307189542,
+      "std": 0.3468375652793449,
+      "min": 4e-06,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.54,
+      "std": 0.35,
+      "min": 0.0,
+      "max": 1.0,
+      "ideal_range": [
+        0.7,
+        0.9
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.16
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "FollowThroughAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "FollowThroughAngle_deg",
+      "mean": 99.03250784313727,
+      "std": 25.751019480006512,
+      "min": 33.5989,
+      "max": 146.5825,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 99.03,
+      "std": 25.75,
+      "min": 33.6,
+      "max": 146.58,
+      "ideal_range": [
+        150,
+        180
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 50.97
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "FrontFootStrideLength_cm",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "FrontFootStrideLength_cm",
+      "mean": 76.60346405228759,
+      "std": 17.81858130983162,
+      "min": 64.86,
+      "max": 117.13,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 76.6,
+      "std": 17.82,
+      "min": 64.86,
+      "max": 117.13,
+      "ideal_range": [
+        60,
+        80
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadAngle_deg",
+      "mean": 46.01163137254902,
+      "std": 17.18073336863537,
+      "min": 4.87,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 46.01,
+      "std": 17.18,
+      "min": 4.87,
+      "max": 60.0,
+      "ideal_range": [
+        0,
+        15
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 31.01
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadStabilityIndex",
+      "mean": 0.7076214836601307,
+      "std": 0.17269635903241853,
+      "min": 0.265952,
+      "max": 0.958073,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.71,
+      "std": 0.17,
+      "min": 0.27,
+      "max": 0.96,
+      "ideal_range": [
+        0.8,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.09
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadStillnessAfterImpact_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadStillnessAfterImpact_deg",
+      "mean": 17.52760849673203,
+      "std": 21.59278262087805,
+      "min": 0.0,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 17.53,
+      "std": 21.59,
+      "min": 0.0,
+      "max": 45.0,
+      "ideal_range": [
+        0,
+        5
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 12.53
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadVerticalDrift_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadVerticalDrift_deg",
+      "mean": 39.05044901960784,
+      "std": 19.56193327362085,
+      "min": 1.0156,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 39.05,
+      "std": 19.56,
+      "min": 1.02,
+      "max": 60.0,
+      "ideal_range": [
+        0,
+        10
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 29.05
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "SpineAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "SpineAngle_deg",
+      "mean": 20.932167973856206,
+      "std": 5.815171199890281,
+      "min": 9.0963,
+      "max": 37.1303,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 20.93,
+      "std": 5.82,
+      "min": 9.1,
+      "max": 37.13,
+      "ideal_range": [
+        5,
+        20
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 0.93
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "StepDirectionDeviation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "StepDirectionDeviation_deg",
+      "mean": 4.312823529411765,
+      "std": 1.3843767552568036,
+      "min": 0.7805,
+      "max": 7.7226,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 4.31,
+      "std": 1.38,
+      "min": 0.78,
+      "max": 7.72,
+      "ideal_range": [
+        0,
+        10
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "TrunkLean_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TrunkLean_deg",
+      "mean": 20.932167973856206,
+      "std": 5.815171199890281,
+      "min": 9.0963,
+      "max": 37.1303,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 20.93,
+      "std": 5.82,
+      "min": 9.1,
+      "max": 37.13,
+      "ideal_range": [
+        10,
+        25
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "WeightTransferEfficiency_pct",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "WeightTransferEfficiency_pct",
+      "mean": 41.20934640522876,
+      "std": 11.72097869954837,
+      "min": 25.39,
+      "max": 72.61,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 41.21,
+      "std": 11.72,
+      "min": 25.39,
+      "max": 72.61,
+      "ideal_range": [
+        70,
+        90
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 28.79
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "BackFootAnchorStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "BackFootAnchorStabilityIndex",
+      "mean": 0.7510856753246753,
+      "std": 0.428017533041655,
+      "min": 0.0,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.75,
+      "std": 0.43,
+      "min": 0.0,
+      "max": 1.0,
+      "ideal_range": [
+        0.7,
+        0.9
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "FollowThroughAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "FollowThroughAngle_deg",
+      "mean": 85.08529740259742,
+      "std": 10.439614550846995,
+      "min": 72.9766,
+      "max": 102.0771,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 85.09,
+      "std": 10.44,
+      "min": 72.98,
+      "max": 102.08,
+      "ideal_range": [
+        150,
+        180
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 64.91
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "FrontFootStrideLength_cm",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "FrontFootStrideLength_cm",
+      "mean": 28.603636363636358,
+      "std": 31.14987061344637,
+      "min": 10.91,
+      "max": 96.74,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 28.6,
+      "std": 31.15,
+      "min": 10.91,
+      "max": 96.74,
+      "ideal_range": [
+        60,
+        80
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 31.4
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadAngle_deg",
+      "mean": 47.91131558441558,
+      "std": 8.492033278160507,
+      "min": 29.4084,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 47.91,
+      "std": 8.49,
+      "min": 29.41,
+      "max": 60.0,
+      "ideal_range": [
+        0,
+        15
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 32.91
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadStabilityIndex",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadStabilityIndex",
+      "mean": 0.4930972467532468,
+      "std": 0.3089488088766383,
+      "min": 0.148033,
+      "max": 1.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 0.49,
+      "std": 0.31,
+      "min": 0.15,
+      "max": 1.0,
+      "ideal_range": [
+        0.8,
+        1.0
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 0.31
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadStillnessAfterImpact_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadStillnessAfterImpact_deg",
+      "mean": 17.9512987012987,
+      "std": 21.681950372957534,
+      "min": 0.0,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 17.95,
+      "std": 21.68,
+      "min": 0.0,
+      "max": 45.0,
+      "ideal_range": [
+        0,
+        5
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 12.95
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "HeadVerticalDrift_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "HeadVerticalDrift_deg",
+      "mean": 39.80878181818182,
+      "std": 15.028274770409553,
+      "min": 3.2512,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 39.81,
+      "std": 15.03,
+      "min": 3.25,
+      "max": 60.0,
+      "ideal_range": [
+        0,
+        10
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 29.81
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "SpineAngle_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "SpineAngle_deg",
+      "mean": 19.239906493506492,
+      "std": 24.80592394192807,
+      "min": 0.5722,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 19.24,
+      "std": 24.81,
+      "min": 0.57,
+      "max": 60.0,
+      "ideal_range": [
+        5,
+        20
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "StepDirectionDeviation_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "StepDirectionDeviation_deg",
+      "mean": 35.035506493506496,
+      "std": 16.463684840040948,
+      "min": 2.9211,
+      "max": 45.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 35.04,
+      "std": 16.46,
+      "min": 2.92,
+      "max": 45.0,
+      "ideal_range": [
+        0,
+        10
+      ],
+      "ideal_status": "Above Ideal Range",
+      "deviation_from_ideal": 25.04
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "TrunkLean_deg",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "TrunkLean_deg",
+      "mean": 19.239906493506492,
+      "std": 24.80592394192807,
+      "min": 0.5722,
+      "max": 60.0,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 19.24,
+      "std": 24.81,
+      "min": 0.57,
+      "max": 60.0,
+      "ideal_range": [
+        10,
+        25
+      ],
+      "ideal_status": "Within Ideal Range",
+      "deviation_from_ideal": 0
+    }
+  },
+  {
+    "player_id": "player_01",
+    "player_segment": "intermediate",
+    "session_id": "player_01_session_01",
+    "view": "side_on",
+    "metric": "WeightTransferEfficiency_pct",
+    "phase": "stance \u2192 impact",
+    "values": {
+      "metric": "WeightTransferEfficiency_pct",
+      "mean": 5.77987012987013,
+      "std": 1.9795350952782174,
+      "min": 5.0,
+      "max": 13.95,
+      "unit": ""
+    },
+    "interpretation": {
+      "mean": 5.78,
+      "std": 1.98,
+      "min": 5.0,
+      "max": 13.95,
+      "ideal_range": [
+        70,
+        90
+      ],
+      "ideal_status": "Below Ideal Range",
+      "deviation_from_ideal": 64.22
+    }
+  }
+]
