@@ -4,6 +4,9 @@ import os
 from config import FAISS_INDEX_PATH, METADATA_PATH, DOCS_PATH
 
 def load_or_create_index(dimension=1024):
+    print("FAISS PATH:", FAISS_INDEX_PATH)
+    print("METADATA PATH:", METADATA_PATH)
+
     if FAISS_INDEX_PATH.exists():
         index = faiss.read_index(str(FAISS_INDEX_PATH))
 

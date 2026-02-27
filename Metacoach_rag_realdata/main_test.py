@@ -26,7 +26,7 @@ print("Creating:", SESSION_ID)
 # -----------------------------
 s3 = boto3.client("s3")
 
-response = s3.list_objects_v2(
+response = s3.list_objects_v2( 
     Bucket=BUCKET_NAME,
     Prefix="csvs/test/"
 )

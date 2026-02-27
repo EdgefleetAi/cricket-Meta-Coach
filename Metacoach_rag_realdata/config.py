@@ -1,7 +1,10 @@
 from pathlib import Path
 
+# ========= BASE DIRECTORY (VERY IMPORTANT FIX) =========
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ========= LOCAL INDEX PATH =========
-INDEX_DIR = Path("rag_index_real")
+INDEX_DIR = BASE_DIR / "rag_index_real"
 INDEX_DIR.mkdir(exist_ok=True)
 
 FAISS_INDEX_PATH = INDEX_DIR / "unified_hnsw.index"

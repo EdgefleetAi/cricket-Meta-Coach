@@ -20,14 +20,14 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 # View-specific metrics
 SIDE_VIEW_METRICS = [
-    "HeadVerticalDrift_deg", "HeadAngle_deg", "HeadStabilityIndex",
-    "FrontFootStrideLength_cm", "BackFootAnchorStabilityIndex",
+    "HeadVerticalDrift_deg","HeadAngle_deg", "HeadStabilityIndex","FollowThroughAngle_deg","HeadStillnessAfterImpact_deg",
+    "FrontFootStrideLength_cm", "BackFootAnchorStabilityIndex","TrunkLean_deg","SpineAngle_deg",
     "WeightTransferEfficiency_pct", "StepDirectionDeviation_deg",
     "FootContactTime_ms"
 ]
 
 FRONT_VIEW_METRICS = [
-    "HeadLateralDeviation_deg", "HeadAlignmentScore",
+    "HeadAlignmentScore","HeadLateralDeviation_deg",
     "TorsoRotation_deg", "TorsoStabilityIndex", "PelvisAlignmentScore",
     "LateralBend_deg"
 ]

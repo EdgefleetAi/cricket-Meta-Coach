@@ -91,8 +91,10 @@ METRIC_ALIASES = {
 
     "spine angle": "SpineAngle_deg",
     "torso rotation": "TorsoRotation_deg",
+    "rotation of torso": "TorsoRotation_deg",
     "torso stability": "TorsoStabilityIndex",
-    "lateral bend": "LateralBend_deg",
+    "stability of torso": "TorsoStabilityIndex",
+    "lateral bend": "LateralBend_deg", 
     "pelvis alignment": "PelvisAlignmentScore",
 
     "stride length": "FrontFootStrideLength_cm",
@@ -246,9 +248,9 @@ def unified_query(q, top_k=10, wide_k=120):
 if __name__ == "__main__":
 
     while True:
-        q = input("\nEnter query (type sanjot to stop): ")
+        q = input("\nEnter query (type 'exit' to stop): ")
 
-        if q.lower() == "sanjot":
+        if q.lower() == "exit":
             break
 
         results = unified_query(q)
